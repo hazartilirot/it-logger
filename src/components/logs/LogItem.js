@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from "react-moment";
 import PropTypes from 'prop-types';
 
 const LogItem = ({log: {id, message, attention, tech, date}}) => {
@@ -12,6 +13,14 @@ const LogItem = ({log: {id, message, attention, tech, date}}) => {
               ? 'red-text' 
               : 'blue-text'}`}
         >{message}</a>
+        <br/>
+        <span className="grey-text">
+          <span className="black-text">ID #{id}</span>
+          {' '} last updated by {' '}
+          <span className="black-text">{tech}</span>
+          {' '} <Moment format="Do MMMM YYYY, hh:mm:ss">{date}</Moment>
+        </span>
+        <a href="#!" className="secondary-content"><i className="material-icons grey-text">delete</i></a>
       </div>
     </li>
   );

@@ -16,5 +16,4 @@ const SearchBar = (props) => {
     </nav>
   );
 }
-
 export default SearchBar;
